@@ -94,4 +94,13 @@ public class ClosestToZeroFinderTest {
 
         assertThat(result).isEqualTo(-1);
     }
+
+    @Test
+    public void aListOfMaxAndMinShouldReturnMax() {
+        intList = List.of(Integer.MAX_VALUE, Integer.MIN_VALUE);
+
+        int result = underTest.findClosestToZero(intList);
+
+        assertThat(result).isEqualTo(Integer.MAX_VALUE);
+    }
 }
